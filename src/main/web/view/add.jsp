@@ -13,8 +13,7 @@
             <%
                 if (request.getAttribute("existingUser") != null) {
                     out.println("<p>User '" + request.getAttribute("existingUser") + "' has already been added!</p>");
-                } else
-                    if (request.getAttribute("userName") != null) {
+                } else if (request.getAttribute("userName") != null) {
                     out.println("<p>User '" + request.getAttribute("userName") + "' added!</p>");
                 }
             %>
