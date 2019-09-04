@@ -1,16 +1,23 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: igork
-  Date: 03.09.2019
-  Time: 18:37
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Users list</title>
-</head>
-<body>
+    <head>
+        <title>Users list</title>
+    </head>
+    <body>
+        <ul>
+            <%
+                List<String> names = (List<String>) request.getAttribute("userNames");
 
-</body>
+                if (names != null && !names.isEmpty()) {
+                    for (String s : names) {
+                        out.println("<li>" + s + "</li>");
+                    }
+                    out.println("</ui>");
+                } else {
+                    out.println("<p> There are no users yet! <p>");
+                }
+            %>
+        </ul>
+    </body>
 </html>
