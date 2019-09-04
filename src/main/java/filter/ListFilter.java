@@ -28,7 +28,7 @@ public class ListFilter implements Filter {
 //            chain.doFilter(request, response);
 //        }
         // TODO: 04.09.2019 Сделать еще один сервлет, для которого сделать переадресацию
-        // TODO: 04.09.2019 https://www.codejava.net/java-ee/servlet/ 
+        // TODO: 04.09.2019 https://www.codejava.net/java-ee/servlet/
     }
 
     @Override
