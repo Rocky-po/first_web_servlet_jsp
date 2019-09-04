@@ -31,9 +31,10 @@ public class Model {
     }
 
     public boolean getUser(User newUser) {
-        Optional<User> user = model.stream()
-                                   .filter(newUser::equals)
-                                   .findAny();
+        Optional<String> user = model.stream()
+                                     .map(User::getName)
+                                     .filter(name -> newUser.getName().equals(name))
+                                     .findAny();
         return user.isPresent();
     }
 }
