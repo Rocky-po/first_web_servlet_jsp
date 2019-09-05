@@ -42,21 +42,8 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.2.3</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                        </manifest>
-                    </archive>
-                    <webappDirectory>src/main/web/</webappDirectory>
-                    <webXml>src/main/web/WEB-INF/web.xml</webXml>
                     <warName>web</warName>
-                    <webResources>
-                        <resource>
-                            <directory>src/main/web/META-INF</directory>
-                            <targetPath>META-INF</targetPath>
-                            <filtering>true</filtering>
-                        </resource>
-                    </webResources>
+                    <warSourceDirectory>src/main/web</warSourceDirectory>
                 </configuration>
             </plugin>
         </plugins>
